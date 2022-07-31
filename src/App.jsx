@@ -1,13 +1,11 @@
 import { useState } from 'react'
-import airbnbLogo from './assets/airbnb-logo.png'
+import Navbar from './components/Navbar.jsx'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <h1>hello world</h1>
+      <Navbar />
         
     </div>
   )
