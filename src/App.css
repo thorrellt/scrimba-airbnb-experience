@@ -22,3 +22,36 @@ nav {
   max-height: 25.35px;
   padding: 20px 36px;
 }
+
+.Hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.Hero>img {
+  margin-block-start: 20px;
+  align-self: center;
+  max-width: 395px;
+}
+
+.hero--intro {
+  margin-inline-start: 36px;
+}
+
+.Hero h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 110%;
+  text-align: left;
+  margin-block: 32px 0;
+}
+
+.Hero p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 110%;
+  text-align: left;
+  max-width: 320px;
+}
