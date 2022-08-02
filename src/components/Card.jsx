@@ -3,22 +3,32 @@ import cardPhoto from '../assets/katie-zaferes.png'
 import star from '../assets/star.png'
 
 
-export default function Card() {
+export default function Card(props) {
+    const assetPath = "../public/assets/";
+    const {
+        photo, 
+        rating, 
+        reviewCount, 
+        country,
+        title,
+        price 
+    } = props;
+    console.log(props);
+
     return (
         <div className="Card">
-            {/* <span className='card--status'>SOLD OUT</span> */}
-            <img src={cardPhoto} className="card--photo" alt="Card Photo">
+            <img src={assetPath + props.img} className="card--photo" alt="Card Photo">
             </img>
 
             <div className="card--stats">
                 <img src={star} />
-                <span>5.0</span>
-                <span className='gray'>(6) • </span>
-                <span className='gray'>USA</span>
+                <span>{rating}</span>
+                <span className='gray'>({reviewCount}) • </span>
+                <span className='gray'>{country}</span>
             </div>
 
-            <p>Life Lessons with Katie Zaferes</p>
-            <p><span className='bold'>From $136</span> / person</p>
+            <p>{title}</p>
+            <p><span className='bold'>From ${price}</span> / person</p>
         </div>
     )
 }
