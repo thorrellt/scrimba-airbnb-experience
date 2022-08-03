@@ -92,6 +92,17 @@ nav {
   max-width: 176px;
   font-size: 12px;
   text-align: left;
+  position: relative;
+}
+
+.card--badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
 }
 
 .card--image {
