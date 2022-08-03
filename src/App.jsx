@@ -4,19 +4,27 @@ import Hero from './components/Hero.jsx'
 import Card from './components/Card.jsx'
 import katiePhoto from './assets/katie-zaferes.png'
 import './App.css'
+import cardData from './data/cardData.js'
 
 function App() {
+  // console.log(cardData)
+  const cards = cardData.map(card => {
+    return <Card 
+    key ={card.id}
+    img = {card.coverImg}
+    rating = {card.stats.rating}
+    reviewCount = {card.stats.reviewCount}
+    country = {card.location}
+    title = {card.title}
+    price =  {card.price} />
+  })
   return (
     <div className="App">
       <Navbar />
       <Hero />
-      <Card 
-      img = "katie-zaferes.png"
-      rating ="5.0"
-      reviewCount = {6}
-      country = "USA"
-      title = "Life Lessons with Katie Zaferes"
-      price =  {136} />
+      <section className="cards-list">
+        {cards}
+      </section> 
         
     </div>
   )

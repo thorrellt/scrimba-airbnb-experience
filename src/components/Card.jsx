@@ -9,26 +9,25 @@ export default function Card(props) {
         photo, 
         rating, 
         reviewCount, 
-        country,
+        country: location,
         title,
         price 
     } = props;
-    console.log(props);
 
     return (
         <div className="Card">
-            <img src={assetPath + props.img} className="card--photo" alt="Card Photo">
+            <img src={assetPath + props.img} className="card--image" alt="Card Photo">
             </img>
 
             <div className="card--stats">
-                <img src={star} />
+                <img src={star} className="card--star" />
                 <span>{rating}</span>
                 <span className='gray'>({reviewCount}) • </span>
-                <span className='gray'>{country}</span>
+                <span className='gray'>{location}</span>
             </div>
 
-            <p>{title}</p>
-            <p><span className='bold'>From ${price}</span> / person</p>
+            <p className="card--title">{props.title}</p>
+            <p className="card--price"><span className="bold">From ${props.price}</span>  / person</p>
         </div>
     )
 }
