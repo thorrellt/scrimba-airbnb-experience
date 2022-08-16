@@ -4,7 +4,7 @@ import star from '../assets/star.png'
 
 
 export default function Card(props) {
-    const assetPath = "../public/assets/";
+    const assetPath = "../assets/";
     console.log(props)
     let badgeText
     if (props.openSpots === 0) {
